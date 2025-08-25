@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Theme */
+    --background: 210 40% 99%; /* Soft off-white */
+    --foreground: 222 47% 10%; /* Deep gray text */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    /* Modern Blue-Purple Gradient Primary */
+    --primary: 243 75% 59%; /* Indigo/Violet */
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary (for backgrounds, sidebar) */
+    --secondary: 220 20% 96%; /* Subtle gray */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Accents (unique highlight color) */
+    --accent: 340 82% 52%; /* Pink-Magenta */
+    --accent-foreground: 210 40% 98%;
+
+    /* System Colors */
+    --muted: 220 15% 94%;
+    --muted-foreground: 215 15% 45%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 243 75% 59%;
+
+    /* Charts Palette */
+    --chart-1: 243 75% 59%; /* Indigo */
+    --chart-2: 340 82% 52%; /* Magenta */
+    --chart-3: 160 60% 45%; /* Green */
+    --chart-4: 30 80% 55%;  /* Orange */
+    --chart-5: 196 80% 55%; /* Sky Blue */
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 243 75% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 340 82% 52%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 243 75% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 340 82% 52%;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 222 47% 6%;  /* Deep navy slate */
+    --foreground: 210 40% 96%; /* Light text */
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 267 75% 65%; /* Bright Neon Violet */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 222 30% 12%; /* Muted dark gray */
+    --secondary-foreground: 210 40% 96%;
+
+    --accent: 196 100% 55%; /* Neon Cyan */
+    --accent-foreground: 222 47% 10%;
+
+    --muted: 222 30% 15%;
+    --muted-foreground: 215 15% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 267 75% 65%;
+
+    --chart-1: 267 75% 65%; /* Neon Violet */
+    --chart-2: 196 100% 55%; /* Neon Cyan */
+    --chart-3: 340 82% 60%;  /* Neon Magenta */
+    --chart-4: 45 100% 50%;  /* Neon Yellow */
+    --chart-5: 160 80% 45%;  /* Neon Green */
+
+    /* Sidebar (Dark Glow Style) */
+    --sidebar-background: 222 47% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 196 100% 55%; /* Cyan */
+    --sidebar-primary-foreground: 222 47% 10%;
+    --sidebar-accent: 267 75% 20%; /* Violet Glow */
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 196 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border transition-colors duration-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none;
+  }
+  main {
+    padding: 0 !important;
+  }
+}
